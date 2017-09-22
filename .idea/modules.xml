@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KotlinCamera.iml" filepath="$PROJECT_DIR$/KotlinCamera.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-camera.iml" filepath="$PROJECT_DIR$/kotlin-camera.iml" />
     </modules>
   </component>
 </project>
