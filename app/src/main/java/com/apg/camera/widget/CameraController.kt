@@ -8,7 +8,7 @@ import android.view.WindowManager
 /**
  * Created by siwarats on 22/9/2560.
  */
-object CameraManager {
+object CameraController {
 
     fun getCameraInstance(): Camera? {
         var camera: Camera? = null

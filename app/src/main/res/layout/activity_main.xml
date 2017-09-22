@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context="com.apg.camera.MainActivity">
 
-    <com.apg.camera.widget.CameraPreview
+    <com.apg.camera.widget.CameraView
         android:id="@+id/cameraView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

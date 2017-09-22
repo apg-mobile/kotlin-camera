@@ -3,7 +3,7 @@ package com.apg.camera.widget.exception
 /**
  * Created by siwarats on 22/9/2560.
  */
-class CameraPreviewException : RuntimeException {
+class CameraViewException : RuntimeException {
     constructor() : super()
     constructor(message: String?) : super(message)
     constructor(message: String?, cause: Throwable?) : super(message, cause)

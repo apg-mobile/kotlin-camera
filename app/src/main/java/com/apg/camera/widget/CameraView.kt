@@ -6,13 +6,13 @@ import android.util.AttributeSet
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.widget.FrameLayout
-import com.apg.camera.widget.exception.CameraPreviewException
+import com.apg.camera.widget.exception.CameraViewException
 
 /**
  * Created by alphaadmin on 27/9/2559.
  */
 
-class CameraPreview : SurfaceView, SurfaceHolder.Callback, Camera.AutoFocusCallback {
+class CameraView : SurfaceView, SurfaceHolder.Callback, Camera.AutoFocusCallback {
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
@@ -24,7 +24,7 @@ class CameraPreview : SurfaceView, SurfaceHolder.Callback, Camera.AutoFocusCallb
 
     private var camera: Camera? = null
         get() {
-            if (field == null) field = CameraManager.getCameraInstance()
+            if (field == null) field = CameraController.getCameraInstance()
             return field
         }
 
@@ -36,16 +36,16 @@ class CameraPreview : SurfaceView, SurfaceHolder.Callback, Camera.AutoFocusCallb
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        if (parent !is FrameLayout) throw CameraPreviewException("Parent should be FrameLayout!")
+        if (parent !is FrameLayout) throw CameraViewException("Parent should be FrameLayout!")
     }
 
     override fun surfaceChanged(holder: SurfaceHolder?, format: Int, width: Int, height: Int) {
         camera?.stopPreview()
         val cameraParams = camera?.parameters
 
-        CameraManager.getBestCameraSize(camera?.parameters?.supportedPreviewSizes)?.let {
+        CameraController.getBestCameraSize(camera?.parameters?.supportedPreviewSizes)?.let {
             cameraParams?.setPreviewSize(it.width, it.height)
-            val surfaceSize = CameraManager.getBestSurfaceSize(context, it)
+            val surfaceSize = CameraController.getBestSurfaceSize(context, it)
             layoutParams = FrameLayout.LayoutParams(surfaceSize.height, surfaceSize.width)
         }
 
@@ -63,7 +63,7 @@ class CameraPreview : SurfaceView, SurfaceHolder.Callback, Camera.AutoFocusCallb
         }
 
         camera?.parameters = cameraParams
-        camera?.setDisplayOrientation(CameraManager.getCameraOrientation(context).degree)
+        camera?.setDisplayOrientation(CameraController.getCameraOrientation(context).degree)
         camera?.setPreviewDisplay(holder)
         camera?.startPreview()
         camera?.setPreviewCallback(previewCallback)
