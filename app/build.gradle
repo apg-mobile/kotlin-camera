@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 group='com.apg.mobile.library'
@@ -9,7 +9,6 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 25
-        applicationId "com.apg.camera"
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
