@@ -1,4 +1,4 @@
-package com.apg.camera;
+package com.apg.demo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

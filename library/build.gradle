@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-group='com.apg.mobile.library'
+group='com.apg.mobile.library.camera'
 
 android {
     compileSdkVersion 25

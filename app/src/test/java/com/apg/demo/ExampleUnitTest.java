@@ -1,4 +1,4 @@
-package com.apg.camera;
+package com.apg.demo;
 
 import org.junit.Test;
 
