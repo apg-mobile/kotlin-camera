@@ -83,6 +83,7 @@ class CameraView : SurfaceView, SurfaceHolder.Callback, Camera.AutoFocusCallback
     }
 
     fun onPause() {
+        camera?.setPreviewCallback(null)
         camera?.stopPreview()
         camera?.release()
         camera = null
