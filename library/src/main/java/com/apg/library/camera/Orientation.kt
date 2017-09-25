@@ -1,4 +1,4 @@
-package com.apg.library.camera.widget
+package com.apg.library.camera
 
 /**
  * Created by siwarats on 22/9/2560.

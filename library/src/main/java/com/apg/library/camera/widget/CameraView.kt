@@ -6,7 +6,9 @@ import android.util.AttributeSet
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.widget.FrameLayout
-import com.apg.library.camera.widget.exception.CameraViewException
+import com.apg.library.camera.CameraController
+import com.apg.library.camera.Orientation
+import com.apg.library.camera.exception.CameraViewException
 
 /**
  * Created by alphaadmin on 27/9/2559.
@@ -81,6 +83,7 @@ class CameraView : SurfaceView, SurfaceHolder.Callback, Camera.AutoFocusCallback
     }
 
     fun onPause() {
+        camera?.stopPreview()
         camera?.release()
         camera = null
     }

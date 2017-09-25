@@ -1,4 +1,4 @@
-package com.apg.library.camera.widget
+package com.apg.library.camera
 
 import android.content.Context
 import android.hardware.Camera
