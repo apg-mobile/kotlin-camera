@@ -1,4 +1,4 @@
-package com.apg.camera.widget
+package com.apg.library.camera.widget
 
 import android.content.Context
 import android.hardware.Camera
@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.widget.FrameLayout
-import com.apg.camera.widget.exception.CameraViewException
+import com.apg.library.camera.widget.exception.CameraViewException
 
 /**
  * Created by alphaadmin on 27/9/2559.

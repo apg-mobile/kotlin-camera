@@ -1,4 +1,4 @@
-package com.apg.camera.widget.exception
+package com.apg.library.camera.widget.exception
 
 /**
  * Created by siwarats on 22/9/2560.
