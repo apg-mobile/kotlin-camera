@@ -3,5 +3,6 @@ package com.apg.library.camera.widget
 import android.hardware.Camera
 
 fun CameraView.setPreviewCallback(cb: (ByteArray, Camera) -> Unit) {
-    previewCallback = cb
+    val child = getChildAt(0)
+    if(child is CameraPreview) child.previewCallback = cb
 }
